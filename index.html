@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="global.css">
+    </head>
+    <body>
+        <script>
+                function login()
+                {
+                    var UName=document.forms["form"]["UserName"].value;
+                    var pass=document.forms["form"]["Password"].value;
+                    if (UName=="user@example.com")
+                    {
+                        if (pass=="1234567890")
+                        {
+                            window.open('homepage.html');
+                        }
+                        else
+                        {
+                            alert("Incorrect Email or Password");
+                        }
+                    }
+                    else
+                    {
+                        alert("Incorrect Email or Password");
+                    }
+                }
+        </script>
+
+
+        <div class="header">My Personal Website</div>
+
+        <div class="form-container">
+            <form name="form">
+                <h2>Member Login</h2><br>
+                <input type="text" name="UserName" placeholder="UserName" ><br>
+                <input type="password" name="Password" placeholder=".........." ><br>
+                <input type="submit" name="Submit" value="Submit" onclick="login()"><br>
+            </form>
+        </div>
+    </body>
+</html>
